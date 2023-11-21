@@ -16,10 +16,10 @@ document.getElementById("userform").addEventListener("submit", function (event) 
     event.preventDefault();
 
     const nameInput = document.getElementById("name");
-    const emailInput = document.getElementById("Email");
+    const emailInput = document.getElementById("email");
     const passwordInput = document.getElementById("password");
     const dobInput = document.getElementById("dob");
-    const acceptTermsCheckbox = document.getElementById("acceptTerms");
+    const acceptTermsCheckbox = document.getElementById("Acceptanced terms?");
 
     // Additional validations
     if (!acceptTermsCheckbox.checked) {
