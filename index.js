@@ -18,7 +18,7 @@ document.getElementById("userform").addEventListener("submit", function (event) 
     const nameInput = document.getElementById("name");
     const emailInput = document.getElementById("email");
     const passwordInput = document.getElementById("password");
-    const dobInput = document.getElementById("Dob");
+    const dobInput = document.getElementById("dob");
     const acceptTermsCheckbox = document.getElementById("acceptTerms");
 
     // Additional validations
