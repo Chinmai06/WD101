@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+        <style>
+            body{
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            .form-container {
+                width: 500px;
+                height: fit-content;
+                color:rgb(249, 245, 245);
+            }
+            .input-field::placeholder {
+                color: rgb(15, 15, 15);
+                opacity: 10;
+            }
+
+            .form-container input,
+            .form-container checkbox {
+                border: 1.5px solid rgb(252, 252, 252);
+            }
+            .form-label {
+            color: #ffffff;
+            }
+            .input-field {
+            background-color: rgb(187, 187, 187);
+            border-color: solid #f9f9f9;
+            }
+            .submit-button {
+            background-color: #f3f7f5;
+            color: rgb(10, 9, 9);
+            }
+            .submit-button:hover {
+            background-color: #5a5c5c;
+            color: #181a19;
+            }
+            .entries-container {
+            background-color: #ca7474;
+            border: 2px solid rgb(13, 13, 13);
+            
+            border-radius: 12px;
+            margin-top: 20px;
+            }
+            .entries-header {
+            color: rgb(254, 254, 254);
+            font-weight: 600;
+            }
+            table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            }
+
+            th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+            }
+
+            th {
+            background-color: #f2f2f2;
+            }
+        </style>
+    </head>
+    <body class="min-h-screen flex flex-col justify-center text-black py-6">
+        <div class="mx-auto form-container bg-black shadow-lg rounded-lg p-8">
+            <h2 class="text-3xl text-center text-black font-bold entries-header mb-5 black">
+                Registration Form
+            </h2>
+            <form id="userform" class="space-y-8">
+                <div>
+                    <label for="name" class="block text-md text-black form-label">
+                      Name
+                    </label>
+                    <input required type="text" id="name" name="name" class="input-field w-full text-black p-2 rounded-md"
+                    placeholder="Enter name" required>
+                </div>
+                <div>
+                    <label for="name" class="block text-md font-medium form-label">
+                      Email
+                    </label>
+                    <input required type="text" id="Email" name="Email" class="input-field w-full text-black p-2 rounded-md"
+                    placeholder="name@gmail.com" required>
+                </div>
+                <div>
+                    <label for="name" class="block text-md font-medium form-label">
+                      Password
+                    </label>
+                    <input required type="password" id="password" name="password" class="input-field w-full text-black p-2 rounded-md"
+                    placeholder="Password" required>
+                </div>
+                <div>
+                    <label for="dob" class="block text-md font-medium form-label">
+                      Date of Birth
+                    </label>
+                    <input required type="date" id="dob" name="dob" class="input-field text-black p-2 rounded-md">
+                </div>
+                <div class="flex items-center">
+                <input required type="checkbox" id="acceptTerms" name="acceptTerms" class="checkbox-field">
+                <label for="remember" class="ml-2 block text-md font-medium form-label">I agree <a href="#" class="text-blue-600 hover:underline dark:text-blue-500">terms and conditions</a>.</label>
+                </div>
+                <p class="text-red-500 font-medium hidden" id="error"></p>
+                <button type="submit" class="submit-button py-2 px-4 rounded-md">
+                Submit
+                </button>
+            </form>
+        </div>
+        <div class="mx-auto entries-container p-8">
+            <h2 class="text-3xl text-center font-bold text-black entries-header mb-2">
+              Entries
+            </h2>
+            <table id="entriesTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                        <th>Date of Birth</th>
+                        <th>Acceptance</th>
+                    </tr>
+                </thead>
+                <tbody id="user-entries"></tbody>
+            </table>
+        </div>
+        <script src="./index.js"></script>
+    </body>
+
+</html>
